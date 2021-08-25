@@ -32,6 +32,6 @@ I have fully tested and deployed on BSC to take advantage of cheaper gas fees. T
 
 It was deployed using remix and fully tested in remix. 
 
-The web app is a simple HTML/CSS/Javascript only way to show the basics of a DAPP. No server side node.js / ganache or test tools required. Just any web server to host the html and javscript. 
+The web app is a simple HTML/CSS/Javascript. Its aim is to demonstarte the basics of a DAPP. No server side node.js. All integrations with local metamask are done via front end web3 javascript. Just need a basic web server to host the html and javscript app. 
 
 
