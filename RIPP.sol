@@ -1,4 +1,4 @@
-// SPDX-License-Identifier: SKEL PTY LTD
+// SPDX-License-Identifier: RIPP CO
 pragma solidity ^0.6.0;
 
 interface IERC20 {
@@ -10,19 +10,23 @@ interface IERC20 {
     function transfer(address recipient, uint256 amount) external returns (bool);
     function approve(address spender, uint256 amount) external returns (bool);
     function transferFrom(address sender, address recipient, uint256 amount) external returns (bool);
-
-
+    function getSymbol() external view returns (string memory);
+    function getDecimals() external view returns (uint8);
+    function getName() external view returns (string memory);
+    
     event Transfer(address indexed from, address indexed to, uint256 value);
     event Approval(address indexed owner, address indexed spender, uint256 value);
 }
 
 
-contract RuggToken is IERC20 {
+contract RIPPToken is IERC20 {
 
-    string public constant name = "RuggToken";
-    string public constant symbol = "Rugg";
+    string public constant name = "RIPPToken";
+    string public constant symbol = "RIPP";
     uint8 public constant decimals = 18;
 
+
+   
 
     event Approval(address indexed tokenOwner, address indexed spender, uint tokens);
     event Transfer(address indexed from, address indexed to, uint tokens);
@@ -31,18 +35,37 @@ contract RuggToken is IERC20 {
     mapping(address => uint256) balances;
 
     mapping(address => mapping (address => uint256)) allowed;
-
+						  
     uint256 totalSupply_ = 10000000000000000000000000000000;
 
     using SafeMath for uint256;
 
-   constructor() public {
+    constructor() public {
     balances[msg.sender] = totalSupply_;
     }
 
+   
+
+    function getSymbol() public override view returns (string memory) {
+    return symbol;
+    } 
+    
+    function getDecimals() public override view returns (uint8) {
+    return decimals;
+    } 
+    
+    function getName() public override view returns (string memory) {
+    return name;
+    } 
+    
+    
+    
+    
+ 
     function totalSupply() public override view returns (uint256) {
     return totalSupply_;
     }
+ 
 
     function balanceOf(address tokenOwner) public override view returns (uint256) {
         return balances[tokenOwner];
@@ -91,7 +114,7 @@ library SafeMath {
     }
 }
 
-contract RUGGDEX {
+contract RIPPDEX {
 
     event Bought(uint256 amount);
     event Sold(uint256 amount);
@@ -100,7 +123,7 @@ contract RUGGDEX {
     IERC20 public token;
 
     constructor() public {
-        token = new RuggToken();
+        token = new RIPPToken();
     }
 
     function buy() payable public {
