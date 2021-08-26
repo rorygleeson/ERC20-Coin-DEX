@@ -1,4 +1,4 @@
-# ERC20 Token + DEX + FrontEnd Dapp (Web3.js)
+# ERC20 Token + DEX + FrontEnd Dapp (Web3.js) + MetaMask
 
 
 # 2 contracts
