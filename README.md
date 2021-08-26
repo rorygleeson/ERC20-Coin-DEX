@@ -1,5 +1,5 @@
-# ERC20 Token + DEX
-==========================
+# ERC20 Token + DEX + FrontEnd Dapp
+=======================================
 
 2 contracts:
 
@@ -28,6 +28,6 @@ I compiled and then deployed using Remix IDE.
 I have fully tested and deployed on BSC to take advantage of cheaper gas fees. The exact same code should also work on Ethereum chain. 
 
 
-The web app is a simple HTML/CSS/Javascript. Its aim is to demonstarte the basics of a DAPP. No server side node.js. All integrations with local metamask are done via front end web3 javascript. Just need a basic web server to host the html and javscript app is required. You need to only change the 2 contract addresses defined in the index.html, to reflect your own 2 contract addresses.
+The web app is a simple HTML/CSS/Javascript. Its aim is to demonstarte the basics of a DAPP. No server side node.js required. No react or any other tools, just simple html/JS. All integrations with local metamask are done via front end web3 javascript. Just need a basic web server to host the html and javscript app is required. You need to only change the 2 contract addresses defined in the index.html, to reflect your own 2 contract addresses.
 
 
