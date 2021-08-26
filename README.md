@@ -21,7 +21,7 @@ Both contracts are written in Solidity, and included in Ripp.sol
 
 So you just need to deploy only the RIPPDEX contract, since this will deploy the Ripp token contract. 
 
-Initial token supply goes to DEX contract. 
+Initial token supply goes to RIPDEX contract. 
 
 I compiled and then deployed using Remix IDE. 
 
