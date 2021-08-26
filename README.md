@@ -1,5 +1,5 @@
-# ERC20 Token + DEX + FrontEnd Dapp
-=======================================
+# ERC20 Token + DEX + FrontEnd Dapp (Web3.js)
+==============================================
 
 2 contracts:
 
