@@ -1,4 +1,4 @@
-// SPDX-License-Identifier: RIPP CO
+// SPDX-License-Identifier: YODA CO
 pragma solidity ^0.6.0;
 
 interface IERC20 {
@@ -10,19 +10,17 @@ interface IERC20 {
     function transfer(address recipient, uint256 amount) external returns (bool);
     function approve(address spender, uint256 amount) external returns (bool);
     function transferFrom(address sender, address recipient, uint256 amount) external returns (bool);
-    function getSymbol() external view returns (string memory);
-    function getDecimals() external view returns (uint8);
-    function getName() external view returns (string memory);
+  
     
     event Transfer(address indexed from, address indexed to, uint256 value);
     event Approval(address indexed owner, address indexed spender, uint256 value);
 }
 
 
-contract RIPPToken is IERC20 {
+contract YODAToken is IERC20 {
 
-    string public constant name = "RIPPToken";
-    string public constant symbol = "RIPP";
+    string public constant name = "YODAToken";
+    string public constant symbol = "YODA";
     uint8 public constant decimals = 18;
 
 
@@ -46,20 +44,6 @@ contract RIPPToken is IERC20 {
 
    
 
-    function getSymbol() public override view returns (string memory) {
-    return symbol;
-    } 
-    
-    function getDecimals() public override view returns (uint8) {
-    return decimals;
-    } 
-    
-    function getName() public override view returns (string memory) {
-    return name;
-    } 
-    
-    
-    
     
  
     function totalSupply() public override view returns (uint256) {
@@ -114,7 +98,7 @@ library SafeMath {
     }
 }
 
-contract RIPPDEX {
+contract YODADEX {
 
     event Bought(uint256 amount);
     event Sold(uint256 amount);
@@ -123,7 +107,7 @@ contract RIPPDEX {
     IERC20 public token;
 
     constructor() public {
-        token = new RIPPToken();
+        token = new YODAToken();
     }
 
     function buy() payable public {
