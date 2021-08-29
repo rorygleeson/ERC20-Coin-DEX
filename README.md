@@ -4,22 +4,22 @@
 # 2 contracts
 
 
-One to implement a Token. The RIPP Token. ERC20 standard.
-RIPPToken ContractId = 0x2A7A5d59a99D713E3813D70041db2c33714fa760  (live on BSC) 
+One to implement a Token. The YODA Token. ERC20 standard.
+YODAToken ContractId = 0x809F244aFcbFB1435FF9e4b4EC00A758f4C4b8Ab  (live on BSC) 
 
 
 
 
-One to implement an exchange (to buy or sell the RIPP token). This contract also creates and initilizes the RIPP Token. 
-A simple exchange to swap 1 wei BNB/Ether for 1 RIPP token. 1 BNB / 1 Ether = 1,000,000,000,000,000,000 wei.
-RIPPDEX ContractId = 0x2A7A5d59a99D713E3813D70041db2c33714fa760   (live on BSC)
+One to implement an exchange (to buy or sell the YODA token). This contract also creates and initilizes the YODA Token. 
+A simple exchange to swap 1 wei BNB/Ether for 1 YODA token. 1 BNB / 1 Ether = 1,000,000,000,000,000,000 wei.
+YODADEX ContractId = 0x201f130dF701c6693CF7c47B784ef1A06c696f99   (live on BSC)
 
 
-Both contracts are written in Solidity, and included in Ripp.sol
+Both contracts are written in Solidity, and included in YODA.sol
 
-So you just need to deploy only the RIPPDEX contract, since this will deploy the Ripp token contract. 
+So you just need to deploy only the YODADEX contract, since this will deploy the YODA token contract. 
 
-Initial token supply goes to RIPDEX contract. 
+Initial token supply goes to YODADEX contract. 
 
 I compiled and then deployed using Remix IDE. 
 
