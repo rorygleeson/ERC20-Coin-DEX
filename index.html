@@ -8,15 +8,15 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/web3/3.0.0-rc.5/web3.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <title>RIPP Token + DEX</title>
+    <title>YODA Token + DEX</title>
 </head>
 
 
 <body>
 
 
-    <style>
-		/* Used for Metamask icon*/
+   <style>
+	/* Used for Metamask icon*/
         .meta-gray {
             -webkit-filter: grayscale(1);
         }
@@ -24,17 +24,17 @@
             -webkit-filter: grayscale(0);
         }
 		
-		/* Rounded border */
-		hr.rounded {
+	/* Rounded border */
+	hr.rounded {
 		border-top: 8px solid #bbb;
 		border-radius: 5px;
-		}
+	}
 		
 		
-		/* Solid border */
+	/* Solid border */
 		hr.solid {
 		border-top: 3px solid #bbb;
-		}
+	}
     </style>
 
 
@@ -42,10 +42,10 @@
 
     <div class="container">
 	
-		<div style="margin-top: 30px;" class="row text-center">
+	<div style="margin-top: 30px;" class="row text-center">
             <div class="col-md-12">
-                <h2>RIPP TOKEN + DEX</h2>
-				<h3>SmartContracts</h3>
+                <h2>YODA TOKEN + DEX</h2>
+		<h3>SmartContracts</h3>
             </div>            
         </div>
 		
@@ -74,57 +74,69 @@
 		
 		
 					
-			<br><br>
-			<hr class="rounded">
-			<br><br>
+	<br><br>
+	<hr class="rounded">
+	<br><br>
 			
 		
         <section class="contract-section hidden">
 		
-			<div style="margin-top: 30px;" class="row text-center">
+	   <div style="margin-top: 30px;" class="row text-center">
                 <div class="col-md-12">
-                    <h3>RIPP TOKEN Contract Details</h3></br>
+                    <h3>YODA TOKEN Contract Details</h3></br>
 					<h4>Binance Smart Chain (BSC) </h4>
 					<br>
-					<h6><a href="https://bscscan.com/address/0x2A7A5d59a99D713E3813D70041db2c33714fa760">RIPP token Contract ID : 0x2A7A5d59a99D713E3813D70041db2c33714fa760 </a></h6>
+					<h6><a href="https://bscscan.com/address/0x809F244aFcbFB1435FF9e4b4EC00A758f4C4b8Ab">YODA token Contract ID : 0x809F244aFcbFB1435FF9e4b4EC00A758f4C4b8Ab </a></h6>
 					
 					
                 </div>
             </div>
 			
-			<br><br>
-			<hr class="solid">
-			<br><br>
+	<br><br>
+	<hr class="solid">
+	<br><br>
 			
 			
 			
-			<div class="row text-center">
+	<div class="row text-center">
                 <div class="col-md-12">
 				     <h4>Token Name</h4>
 					
-                    <span><i id="getName"></i></span>
+                    <span><i id="name"></i></span>
                 </div>
             </div>
-			<br><br>
+			
+
+
+	<br><br>
+	<hr class="solid">
+	<br><br>
+
 			
 			
-			<div class="row text-center">
+	<div class="row text-center">
                 <div class="col-md-12">
 				     <h4>Token Symbol</h4>
 					 
-                    <span><i id="getSymbol"></i></span>
+                    <span><i id="symbol"></i></span>
                 </div>
             </div>
-			<br><br>
 			
-			<div class="row text-center">
+	<br><br>
+	<hr class="solid">
+	<br><br>
+			
+	<div class="row text-center">
                 <div class="col-md-12">
 				     <h4>Token Decimals</h4>
 					
-                    <span><i id="getDecimals"></i></span>
+                    <span><i id="decimals"></i></span>
                 </div>
             </div>
-			<br><br>
+			
+	<br><br>
+	<hr class="solid">
+	<br><br>
 			
             <div class="row text-center">
                 <div class="col-md-12">
@@ -133,23 +145,27 @@
                     <span> <i id="totalSupply"></i></span>
                 </div>
             </div>
-			<br><br>
+	<br><br>
+	<hr class="solid">
+	<br><br>
 			
 			
 			
 			
-		    <div class="row text-center">
+	<div class="row text-center">
                 <div class="col-md-12">
 				     <h4>Your Token Balance</h4>
 					 
                     <span> <i id="balanceOf"></i></span>
                 </div>
             </div>
-			<br><br>
+	<br><br>
+	<hr class="solid">
+	<br><br>
 			
+
 			
-			
-			<div class="row text-center">
+	<div class="row text-center">
                <div class="col-md-12">
                       <h4>Balance of any address</h4>
 					  
@@ -164,20 +180,19 @@
 					
                 </div>
             </div>
-			<br><br>
+	<br>
 			
-			
-			
-			<div class="row text-center">
+	<div class="row text-center">
                 <div class="col-md-12">
 				     <h4>Result </h4>
 					 <div class="col-md-4  offset-4"> 
-					 <input id="balanceOfAddressResult" type="text" class="form-control" value="">  
+					 <input id="balanceOfAddressResult" type="text" class="form-control" value=""  style="text-align:center">  
                      </div>                                                                                                                         
                 </div>
             </div>
 			<br><br>
-			
+			<hr class="solid">
+			<br><br>
 			
 			
 			
@@ -197,7 +212,77 @@
 					
                 </div>
             </div>
+			<br>
+			<div class="row text-center">
+                <div class="col-md-12">
+				     <h4>Result of Transfer</h4>
+					 
+		
+					 <div class="col-md-6  offset-3"> 
+					 Transfer Status  <input id="Status_Transfer" type="text" class="form-control" value=""  style="text-align:center">   
+                     </div>  
+					 
+					 
+					 
+					 <div class="col-md-6  offset-3"> 
+					 Balance Before <input id="balanceBeforeTransfer" type="text" class="form-control" value=""  style="text-align:center">  
+                     </div>   
+					 
+					 
+					 <div class="col-md-6  offset-3"> 
+					 Balance After <input id="balanceAfterTransfer" type="text" class="form-control" value=""  style="text-align:center">  
+                     </div>  
+					 
+					 
+					 <div class="col-md-6  offset-3"> 
+					 BlockHash <input id="BlockHash_Transfer" type="text" class="form-control" value=""  style="font-size:11px;text-align:center"> 
+                     </div>   
+					 
+					 
+					  <div class="col-md-6  offset-3"> 
+					 BlockNumber <input id="BlockNumber_Transfer" type="text" class="form-control" value=""  style="text-align:center">  
+                     </div>  
+					 
+					  <div class="col-md-6  offset-3"> 
+					 CumulativeGasUsed <input id="CumulativeGasUsed_Transfer" type="text" class="form-control" value=""  style="text-align:center">  
+                     </div>  
+					 
+					 
+					 <div class="col-md-6  offset-3"> 
+					 GasUsed<input id="GasUsed_Transfer" type="text" class="form-control" value=""  style="text-align:center">  
+                     </div>   
+					 
+					 
+					 
+					 
+					 
+					 
+                </div>
+            </div>
 			<br><br>
+			<hr class="solid">
+			<br><br>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
 			
 			
 			 <div class="row text-center">
@@ -211,7 +296,48 @@
 					</div>
                 </div>
             </div>
+			<br>
+			
+			<div class="row text-center">
+                <div class="col-md-12">
+				     <h4>Result of Approve</h4>
+					 
+					 
+					  <div class="col-md-6  offset-3"> 
+					 Approve Status  <input id="Status_Approve" type="text" class="form-control" value=""  style="text-align:center">   
+                     </div>  
+				
+					 
+					 <div class="col-md-6  offset-3"> 
+					 BlockHash <input id="BlockHash_Approve" type="text" class="form-control" value=""  style="font-size:11px;text-align:center"> 
+                     </div>   
+					 
+					 
+					  <div class="col-md-6  offset-3"> 
+					 BlockNumber <input id="BlockNumber_Approve" type="text" class="form-control" value=""  style="text-align:center">  
+                     </div>  
+					 
+					  <div class="col-md-6  offset-3"> 
+					 CumulativeGasUsed <input id="CumulativeGasUsed_Approve" type="text" class="form-control" value=""  style="text-align:center">  
+                     </div>  
+					 
+					 
+					 <div class="col-md-6  offset-3"> 
+					 GasUsed<input id="GasUsed_Approve" type="text" class="form-control" value=""  style="text-align:center">  
+                     </div>   
+					 
+					 
+					 
+					 
+					 
+					 
+                </div>
+            </div>
+			
 			<br><br>
+			<hr class="solid">
+			<br><br>
+			
 			
 			
 			
@@ -233,12 +359,12 @@
 			<br><br><br><br>
 			<div style="margin-top: 30px;" class="row text-center">
                 <div class="col-md-12">
-                    <h3>RIPPDEX Contract Details</h3>
+                    <h3>YODADEX Contract Details</h3>
 					<br>
 					<h4>Binance Smart Chain (BSC) </h4>
 					<br>
 					
-					<h6><a href="https://bscscan.com/address/0x14bb75D5bF843501A6232C6578f306B4f46DE614">RIPP DEX Contract ID : 0x14bb75D5bF843501A6232C6578f306B4f46DE614 </a></h6>
+					<h6><a href="https://bscscan.com/address/0x201f130dF701c6693CF7c47B784ef1A06c696f99">YODA DEX Contract ID : 0x201f130dF701c6693CF7c47B784ef1A06c696f99 </a></h6>
 					
 					
                 </div>
@@ -256,7 +382,8 @@
 			
 			<div class="row text-center">
                 <div class="col-md-12">
-					 <h4>Buy RIPP Token</h4>
+					 <h4>Buy YODA Token</h4>
+					 <p>First you must approve the dex contract for the amount you want to buy </p>
 					 <br>
                     <span><strong>Number Token </strong> (uint256 numTokens)
 					<div class="col-md-4  offset-4"> 
@@ -266,9 +393,11 @@
                 </div>
             </div>
 			<br><br>
+			<hr class="solid">
+			<br><br>
 				<div class="row text-center">
                 <div class="col-md-12">
-					 <h4>Sell RIPP Token</h4>
+					 <h4>Sell YODA Token</h4>
 					 <br>
                     <span><strong>Number Token </strong> (uint256 numTokens)
 					<div class="col-md-4  offset-4"> 
@@ -286,14 +415,13 @@
 	
 	
 	
-    <script>
+<script>
 	
         let currentAccount = null;
         let web3;
-        let RIPPToken_contractAddress = '0x2A7A5d59a99D713E3813D70041db2c33714fa760'
-		let RIPPDEX_contractAddress = '0x14bb75D5bF843501A6232C6578f306B4f46DE614'
+        let YODAToken_contractAddress = '0x809F244aFcbFB1435FF9e4b4EC00A758f4C4b8Ab'
+		let YODADEX_contractAddress = '0x201f130dF701c6693CF7c47B784ef1A06c696f99'
 		let haveMetaMaskAccount = false;
-		
 
 
 
@@ -305,6 +433,7 @@
 			await new Promise(resolve => setTimeout(resolve, 1000));
 			getTokenDetails();
 			})();
+			
 
 </script>
 	
@@ -392,12 +521,17 @@
 	
 var abi = [
 	{
+		"inputs": [],
+		"stateMutability": "nonpayable",
+		"type": "constructor"
+	},
+	{
 		"anonymous": false,
 		"inputs": [
 			{
 				"indexed": true,
 				"internalType": "address",
-				"name": "owner",
+				"name": "tokenOwner",
 				"type": "address"
 			},
 			{
@@ -409,7 +543,7 @@ var abi = [
 			{
 				"indexed": false,
 				"internalType": "uint256",
-				"name": "value",
+				"name": "tokens",
 				"type": "uint256"
 			}
 		],
@@ -434,7 +568,7 @@ var abi = [
 			{
 				"indexed": false,
 				"internalType": "uint256",
-				"name": "value",
+				"name": "tokens",
 				"type": "uint256"
 			}
 		],
@@ -450,7 +584,7 @@ var abi = [
 			},
 			{
 				"internalType": "address",
-				"name": "spender",
+				"name": "delegate",
 				"type": "address"
 			}
 		],
@@ -469,12 +603,12 @@ var abi = [
 		"inputs": [
 			{
 				"internalType": "address",
-				"name": "spender",
+				"name": "delegate",
 				"type": "address"
 			},
 			{
 				"internalType": "uint256",
-				"name": "amount",
+				"name": "numTokens",
 				"type": "uint256"
 			}
 		],
@@ -493,7 +627,7 @@ var abi = [
 		"inputs": [
 			{
 				"internalType": "address",
-				"name": "account",
+				"name": "tokenOwner",
 				"type": "address"
 			}
 		],
@@ -510,7 +644,7 @@ var abi = [
 	},
 	{
 		"inputs": [],
-		"name": "getDecimals",
+		"name": "decimals",
 		"outputs": [
 			{
 				"internalType": "uint8",
@@ -523,7 +657,7 @@ var abi = [
 	},
 	{
 		"inputs": [],
-		"name": "getName",
+		"name": "name",
 		"outputs": [
 			{
 				"internalType": "string",
@@ -536,7 +670,7 @@ var abi = [
 	},
 	{
 		"inputs": [],
-		"name": "getSymbol",
+		"name": "symbol",
 		"outputs": [
 			{
 				"internalType": "string",
@@ -564,12 +698,12 @@ var abi = [
 		"inputs": [
 			{
 				"internalType": "address",
-				"name": "recipient",
+				"name": "receiver",
 				"type": "address"
 			},
 			{
 				"internalType": "uint256",
-				"name": "amount",
+				"name": "numTokens",
 				"type": "uint256"
 			}
 		],
@@ -588,17 +722,17 @@ var abi = [
 		"inputs": [
 			{
 				"internalType": "address",
-				"name": "sender",
+				"name": "owner",
 				"type": "address"
 			},
 			{
 				"internalType": "address",
-				"name": "recipient",
+				"name": "buyer",
 				"type": "address"
 			},
 			{
 				"internalType": "uint256",
-				"name": "amount",
+				"name": "numTokens",
 				"type": "uint256"
 			}
 		],
@@ -681,7 +815,6 @@ var abi = [
 
 
 
-
         function handleAccountsChanged(accounts) 
 		{ 
             if (accounts.length === 0) 
@@ -742,18 +875,21 @@ var abi = [
 	{
 			const contractFirst = new web3.eth.Contract(
                         abi,
-                        RIPPToken_contractAddress
+                        YODAToken_contractAddress
             );
 
 
 			contractFirst.methods.totalSupply().call((err, result) => { console.log(result);$('#totalSupply').html(result) })
 		    contractFirst.methods.balanceOf(currentAccount).call((err, result) => { console.log(result);$('#balanceOf').html(result) })
-			contractFirst.methods.getName().call((err, result) => { console.log(result);$('#getName').html(result) })
-			contractFirst.methods.getSymbol().call((err, result) => { console.log(result);$('#getSymbol').html(result) })
-			contractFirst.methods.getDecimals().call((err, result) => { console.log(result);$('#getDecimals').html(result) })			
+			contractFirst.methods.name().call((err, result) => { console.log(result);$('#name').html(result) })
+			contractFirst.methods.symbol().call((err, result) => { console.log(result);$('#symbol').html(result) })
+			contractFirst.methods.decimals().call((err, result) => { console.log(result);$('#decimals').html(result) })			
 	}
 
 
+	
+	
+	
 	async function balanceOfAddress() 
 	{
 			input_value = $('#balanceOfAddress_value').val()
@@ -761,12 +897,12 @@ var abi = [
             const contractFirst = new web3.eth.Contract
 			(
                         abi,
-                        RIPPToken_contractAddress
+                        YODAToken_contractAddress
             );
 			
 			contractFirst.methods.balanceOf(input_value).call((err, result) => 
 			{  
-			$('#balanceOfAddressResult').html(result); 
+			//$('#balanceOfAddressResult').html(result); 
 			document.getElementById("balanceOfAddressResult").value = result;
 			}
 			)
@@ -774,12 +910,14 @@ var abi = [
 
 
 
-        async function transfer() 
-		{
+    async function transfer() 
+	{
             input_value = $('#transfer_value').val()
 			const valueArray = input_value.split(',');
 			const toAddress = valueArray[0];
 			const value = valueArray[1];
+			
+			
 			
             if(input_value.trim() == '') {
                 input_value = 0
@@ -791,18 +929,78 @@ var abi = [
 
 			const contractFirst = new web3.eth.Contract(
                         abi,
-                        RIPPToken_contractAddress
+                        YODAToken_contractAddress
             );
 		
 			
-			contractFirst.methods.transfer(toAddress, value).send({from: currentAccount})
-			.on('transactionHash', function(hash){
-			console.log(hash);
-			});
+			 
+			const expectedBlockTime = 5000; 
+			//const receiverAddress = input_value
+			
+			
+			const sleep = (milliseconds) => {
+					return new Promise(resolve => setTimeout(resolve, milliseconds))
+				}
+			
+			(async function () 
+			{
+			let starting_balance = await contractFirst.methods.balanceOf(currentAccount).call();
+			
+			contractFirst.methods.transfer(toAddress, value).send({from: currentAccount}, async function(error, transactonHash) {
+					console.log("Submitted transaction with hash: ", transactonHash)
+					let transactionReceipt = null
+					while (transactionReceipt == null) { // Waiting expectedBlockTime until the transaction is mined
+							transactionReceipt = await web3.eth.getTransactionReceipt(transactonHash);
+							await sleep(expectedBlockTime)
+					}
+				
+				
+				console.log("Got the transaction receipt: ", transactionReceipt)
+				console.log('Test few trans receipt values');
+				console.log('Block Number');
+				console.log(transactionReceipt.blockNumber);
+				console.log('Block Hash');
+				console.log(transactionReceipt.blockHash);
+				console.log('Cumulative Gas Used');
+				console.log(transactionReceipt.cumulativeGasUsed);
+				console.log('Gas Used');
+				console.log(transactionReceipt.gasUsed);
+				
+				
+				console.log('Status');
+				console.log(transactionReceipt.status);
+				
+				
+				
+				let final_balance = await contractFirst.methods.balanceOf(currentAccount).call();
+				
+				console.log('Starting balance was:', starting_balance);
+				console.log('Ending balance is:', final_balance);
+				
+				document.getElementById("balanceBeforeTransfer").value = starting_balance;
+				document.getElementById("balanceAfterTransfer").value = final_balance;
+				$('#balanceOf').html(final_balance) 
+				
+				
+				document.getElementById("BlockHash_Transfer").value = transactionReceipt.blockHash;
+				document.getElementById("BlockNumber_Transfer").value = transactionReceipt.blockNumber;
+				document.getElementById("CumulativeGasUsed_Transfer").value = transactionReceipt.cumulativeGasUsed;
+				document.getElementById("GasUsed_Transfer").value = transactionReceipt.gasUsed;
+				document.getElementById("Status_Transfer").value = transactionReceipt.status;
+				
+				//document.getElementById("array_Transfer").value = JSON.stringify(transactionReceipt);
+				
+				
+				
+				});
+ 
+			})();
+			
+			
+	}
+		
 
-        }
-		
-		
+
 		
 		
 		
@@ -827,12 +1025,13 @@ var abi = [
 			
 			const contractFirst = new web3.eth.Contract(
                         abi,
-                        RIPPToken_contractAddress
+                        YODAToken_contractAddress
             );
 		
 			contractFirst.methods.transferFrom(senderAddress,recipientAddress,value).send({from: currentAccount})
 			.on('transactionHash', function(hash){
 			console.log(hash);
+			
 			});
 
     }
@@ -864,17 +1063,97 @@ var abi = [
 		
 			const contractFirst = new web3.eth.Contract(
                         abi,
-                        RIPPToken_contractAddress
+                        YODAToken_contractAddress
             );
 			
-			contractFirst.methods.approve(approveAddress, value).send({from: currentAccount})
-			.on('transactionHash', function(hash){
-			console.log(hash);
-			});
+			
+			
+			const expectedBlockTime = 5000; 
+			const sleep = (milliseconds) => {
+					return new Promise(resolve => setTimeout(resolve, milliseconds))
+				}
+			
+			
+			(async function () 
+			{
+			//let starting_balance = await contractFirst.methods.balanceOf(currentAccount).call();
+			
+				contractFirst.methods.approve(approveAddress, value).send({from: currentAccount}, async function(error, transactonHash) {
+					console.log("Submitted approve Transaction with hash: ", transactonHash)
+					let transactionReceipt = null
+					while (transactionReceipt == null) { // Waiting expectedBlockTime until the transaction is mined
+							transactionReceipt = await web3.eth.getTransactionReceipt(transactonHash);
+							await sleep(expectedBlockTime)
+					}
+				
+				console.log("Got the approve transaction receipt: ", transactionReceipt)
+				console.log('Test few trans receipt values');
+				console.log('Block Number');
+				console.log(transactionReceipt.blockNumber);
+				console.log('Block Hash');
+				console.log(transactionReceipt.blockHash);
+				console.log('Cumulative Gas Used');
+				console.log(transactionReceipt.cumulativeGasUsed);
+				console.log('Gas Used');
+				console.log(transactionReceipt.gasUsed);
+				console.log('Status');
+				console.log(transactionReceipt.status);
+				
+			//	let final_balance = await contractFirst.methods.balanceOf(currentAccount).call();
+				
+			//	console.log('Starting balance was:', starting_balance);
+			//	console.log('Ending balance is:', final_balance);
+				
+			//	document.getElementById("balanceBeforeTransfer").value = starting_balance;
+			//	document.getElementById("balanceAfterTransfer").value = final_balance;
+			//	$('#balanceOf').html(final_balance) 
+				
+				document.getElementById("BlockHash_Approve").value = transactionReceipt.blockHash;
+				document.getElementById("BlockNumber_Approve").value = transactionReceipt.blockNumber;
+				document.getElementById("CumulativeGasUsed_Approve").value = transactionReceipt.cumulativeGasUsed;
+				document.getElementById("GasUsed_Approve").value = transactionReceipt.gasUsed;
+				document.getElementById("Status_Approve").value = transactionReceipt.status;
+				});
+ 
+			})();
+			
+			
+			
 
     }
 		
-		
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
 		
 		
 		async function buyTokens() 
@@ -892,7 +1171,7 @@ var abi = [
 
 			const contractFirst = new web3.eth.Contract(
                         abi,
-                        RIPPDEX_contractAddress
+                        YODADEX_contractAddress
             );
 		
 			contractFirst.methods.buy().send({
@@ -926,13 +1205,44 @@ var abi = [
 
 			const contractFirst = new web3.eth.Contract(
                         abi,
-                        RIPPDEX_contractAddress
+                        YODADEX_contractAddress
             );
 		
 			
 		// call transfer function
+		//	console.log('Do the SELL TOKEN FUNCTION..')
+		//	contractFirst.methods.sell().send({
+		//		from: currentAccount,
+		//		value: input_value
+		//		})	
+		//	.on('transactionHash', function(hash){
+		//	console.log(hash);
+		//	});
+			
 			console.log('Do the SELL TOKEN FUNCTION..')
+			
+			input_value = 50;
+			console.log('Input Value is ..')
+			console.log(input_value)
+			
+			
+			
+			contractFirst.methods.sell(input_value).send({from: currentAccount})
+			.on('transactionHash', function(hash){
+			console.log("LOG THE TRANSACTION")
+			console.log("Got the transaction receipt: ", transactionHash)
+			console.log(hash)
+			});
+			
+			
 
+			
+			
+			
+			
+			
+			
+			
 		//	contractFirst.methods.transfer(toAddress, value).send({from: currentAccount})
 		//	.on('transactionHash', function(hash){
 		//	console.log(hash);
