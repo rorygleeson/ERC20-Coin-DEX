@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
    <head>
@@ -357,9 +356,6 @@
 		  
 		  
 		 
-		 		
-
-		 
          // Set up a timer and check when variable haveMetaMaskAccount is set to true, meaning a user is logged in and the app knows the users account address
          (async() => {
          while(!haveMetaMaskAccount) 
@@ -427,13 +423,17 @@
                  alert(error)
              }            
          })
-      </script>  
+      </script> 
+
+
+
+	  
       <script> 
-         // Functions and abi definition here
+         // Functions and abi definition here , note re abi definition it should be possible to have this in separate file but had intermiitent failures so hacked in here instead
          
-         
-         	
-         var abi = [
+		 
+		 
+		 var abi = [
          	{
          		"inputs": [],
          		"stateMutability": "nonpayable",
@@ -773,7 +773,7 @@
          
          
          
-               function detectMetaMask() 
+              function detectMetaMask() 
          	  {
          			if (typeof window.ethereum !== 'undefined') 
          			{    
@@ -1020,9 +1020,6 @@
 						document.getElementById("balanceBeforeTransferFromBuyer").value = starting_balance_recipient;
 						document.getElementById("balanceAfterTransferFromBuyer").value = final_balance_recipient;
 						
-						
-						
-         				
          				document.getElementById("BlockHash_TransferFrom").value = transactionReceipt.blockHash;
          				document.getElementById("BlockNumber_TransferFrom").value = transactionReceipt.blockNumber;
          				document.getElementById("CumulativeGasUsed_TransferFrom").value = transactionReceipt.cumulativeGasUsed;
@@ -1031,20 +1028,11 @@
          				
          				//document.getElementById("array_Transfer").value = JSON.stringify(transactionReceipt);
          				
-         				
-         				
          				});
           
          			})();
-         			
-				
-				
-				
-				
-				
-			
-         
-             }
+         	
+            }
          		
          		
          		
@@ -1062,7 +1050,7 @@
          			{
                          input_value = 0
                      }
-                     if(!isNaN(input_value)) 
+                    if(!isNaN(input_value)) 
          			{
                          input_value = parseInt(input_value)
                      }
@@ -1129,17 +1117,13 @@
           
          			})();
          			
-         			
-         			
-         
-             }
+         	  }
          		
          	
-         
-         
+         	
          		
-         		async function buyTokens() 
-         		{
+         	async function buyTokens() 
+         	{
                      input_value = $('#buyTokens_value').val()
          
                      if(input_value.trim() == '') 
@@ -1163,7 +1147,7 @@
          			.on('transactionHash', function(hash){
          			console.log(hash);
          			});
-         		}
+         	}
          			
          		
          		
@@ -1216,8 +1200,6 @@
          			console.log(hash)
          			});
          			
-         			
-         	
          			
          		//	contractFirst.methods.transfer(toAddress, value).send({from: currentAccount})
          		//	.on('transactionHash', function(hash){
