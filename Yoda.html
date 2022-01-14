@@ -9,6 +9,7 @@
       <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
       <title>YODA Token + DEX</title>
    </head>
+	
    <body>
       <style>
          /* Used for Metamask icon*/
@@ -306,7 +307,10 @@
                   <h6><a href="https://bscscan.com/address/0x201f130dF701c6693CF7c47B784ef1A06c696f99">YODA DEX Contract ID : 0x201f130dF701c6693CF7c47B784ef1A06c696f99 </a></h6>
                </div>
             </div>
+	      
+	      
             <br><br>
+	      
             <hr class="solid">
             <br><br>
             <div class="row text-center">
@@ -324,6 +328,8 @@
                </div>
             </div>
             <br><br>
+	      
+	      
             <hr class="solid">
             <br><br>
             <div class="row text-center">
@@ -339,8 +345,14 @@
                   </div>
                </div>
             </div>
+	      
+	      
          </section>
       </div>
+	
+	
+	
+	
       <script>
          let currentAccount = null;
          let web3;
@@ -365,6 +377,10 @@
          
          
       </script>
+	
+	
+	
+	
       <script>   
          $( document ).ready(function() 
          {
@@ -430,9 +446,7 @@
 	  
       <script> 
          // Functions and abi definition here , note re abi definition it should be possible to have this in separate file but had intermiitent failures so hacked in here instead
-         
-		 
-		 
+          
 		 var abi = [
          	{
          		"inputs": [],
@@ -862,7 +876,8 @@
          			{
          			let starting_balance = await contractFirst.methods.balanceOf(currentAccount).call();
          			
-         			contractFirst.methods.transfer(toAddress, value).send({from: currentAccount}, async function(error, transactonHash) {
+         			contractFirst.methods.transfer(toAddress, value).send({from: currentAccount}, async function(error, transactonHash) 
+										     {
          					console.log("Submitted transaction with hash: ", transactonHash)
          					let transactionReceipt = null
          					while (transactionReceipt == null) { // Waiting expectedBlockTime until the transaction is mined
